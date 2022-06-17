@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
-#用变体文件跑
+
 # data = pd.read_excel('v01.xlsx')
 data=pd.read_excel('../precess/Log_data/Log_v/PrepaidTravelCost_v.xlsx')
 dg = data.groupby(['case_id'])
