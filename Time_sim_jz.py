@@ -37,7 +37,7 @@ print(time_dic)
 new_time_dic=g_l_time(time_dic,B_F)
 print('new_time_dic',new_time_dic)
 
-data = pd.read_excel('../precess/Log_data/PrepaidTravelCost.xlsx')#可调整为整个日志的迹
+data = pd.read_excel('../precess/Log_data/PrepaidTravelCost.xlsx')#整个日志的迹
 dg = data.groupby(['case_id'])
 
 data['date'] = pd.to_datetime(data['date'], errors='coerce')
@@ -134,7 +134,7 @@ def f(dur_g,g_a_l,dit):#统计每个迹中所包含的关联活动所持续的�
                 if v not in t2:#判断在ta之前是否有活动v（可能会有异常迹，缺失或者错位，所关联的活动）
                     continue
                 ind_pre = t.index(v)
-                             #还要判断这两个索引之间是否包含其他关联活动,暂时没判断
+                             
                 time_list=list(df.iloc[:,3])
                 time1=time_list[ind_pre]
                 time2=time_list[ind_aft]
